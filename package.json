@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "nodemon",
     "start": "pm2 start src/loader.js --name todo-app"
+
   },
   "keywords": [],
   "author": "",
