@@ -10,6 +10,7 @@ app.use(bodyParser.json())
 app.use(allowCors)
 
 
+
 app.listen(port, () => {
     console.log('Servidor rodando')
 })
