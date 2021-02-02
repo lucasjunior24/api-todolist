@@ -1,5 +1,5 @@
 const express = require('express')
-const router = require('./Utils/router')
+// const router = require('./Utils/router')
 const mongoose = require('mongoose')
 require('dotenv').config()
 
@@ -12,9 +12,8 @@ mongoose.connect(mongoConnection, {
     useNewUrlParser: true,
 }, () => console.log('connectado ao banco'))
 
+const port = process.env.PORT || 3333
 app.use(express.json())
 // app.use(router)
 
-
-
-app.listen(3333, () => console.log('Servido rodando na porta 33333'))
+app.listen(port, () => console.log('Servido rodando na porta 3333'))
