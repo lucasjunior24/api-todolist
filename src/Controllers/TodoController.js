@@ -5,11 +5,11 @@ module.exports = {
         const { description } = req.body
 
         try { 
-            const todoAlreadyExists = await User.findOne({ description })
+            // const todoAlreadyExists = await User.findOne({ description })
 
-            if(todoAlreadyExists) return res.status(400).send({
-                messagem: "Todo ja existe!"
-            })
+            // if(todoAlreadyExists) return res.status(400).send({
+            //     messagem: "Todo ja existe!"
+            // })
 
             const createTodo = await Todo.create({
                 description
