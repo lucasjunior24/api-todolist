@@ -1,17 +1,17 @@
 const Todo = require('../Models/Todo')
 
 module.exports = {
-    async createUser(req, res) {
+    async createTodo(req, res) {
         const { description } = req.body
 
         try { 
             const todoAlreadyExists = await User.findOne({ description })
 
             if(todoAlreadyExists) return res.status(400).send({
-                messagem: "Este usuário ja existe!"
+                messagem: "Todo ja existe!"
             })
 
-            const createTodo = await User.create({
+            const createTodo = await Todo.create({
                 description
             })
             return res.status(200).send({
