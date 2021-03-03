@@ -39,10 +39,10 @@ module.exports = {
         const { _id } = req.params
        
         try {
-            const idExists = await Post.findById(_id)
+            const idExists = await Todo.findById(_id)
             if(!idExists) return res.status(400).send('Todo não existe')
 
-            const editId = await Post.findByIdAndUpdate(_id, {
+            const editId = await Todo.findByIdAndUpdate(_id, {
                 description // na description quero atualizar a description
             }, {
                 new: true
@@ -63,7 +63,7 @@ module.exports = {
             const idExists = await Todo.findById(_id)
             if(!idExists) return res.status(400).send('Todo não existe')
 
-            const deletedTodo = await Post.findByIdAndDelete(_id)
+            const deletedTodo = await Todo.findByIdAndDelete(_id)
 
             return res.status(200).send({
                 message: 'Deletado com sucesso!',
