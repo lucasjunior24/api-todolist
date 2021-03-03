@@ -37,6 +37,7 @@ module.exports = {
     async updateTodo(req, res) {
         
         const { _id } = req.params
+        const { description } = req.body
        
         try {
             const idExists = await Todo.findById(_id)
