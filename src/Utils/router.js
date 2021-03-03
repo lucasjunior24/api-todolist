@@ -7,9 +7,9 @@ router.post('/todos', TodoController.createTodo)
 // Listar usuarios
 router.get('/todos', TodoController.listTodo)
 // alterando todo
-router.put('/todos/:id', TodoController.updateTodo)
+router.put('/todos/:_id', TodoController.updateTodo)
 // deletando usuarios
-router.delete('/todos/:id', TodoController.deleteTodo)
+router.delete('/todos/:_id', TodoController.deleteTodo)
 
 router.get('/', (req, res) => {
     return res.send('Hellor word')
