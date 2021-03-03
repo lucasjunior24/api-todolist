@@ -49,7 +49,7 @@ module.exports = {
             })
             return res.status(200).send({
                 message: 'Atualizado',
-                data: editId,
+                data: editId
 
             })
         } catch(err) {
