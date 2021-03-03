@@ -47,8 +47,8 @@ module.exports = {
             }, {
                 new: true
             })
-            return res.status(400).send({
-                message: 'Update',
+            return res.status(200).send({
+                message: 'Atualizado',
                 data: editId,
 
             })
