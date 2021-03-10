@@ -37,14 +37,15 @@ module.exports = {
     async updateTodo(req, res) {
         
         const { _id } = req.params
-        const { description } = req.body
+        const { done } = req.body
        
         try {
             const idExists = await Todo.findById(_id)
             if(!idExists) return res.status(400).send('Todo não existe')
 
             const editId = await Todo.findByIdAndUpdate(_id, {
-                description // na description quero atualizar a description
+                 // na description quero atualizar a description
+                done
             }, {
                 new: true
             })
